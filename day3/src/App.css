@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(7, 58, 7);
+
+}
+
+#day {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(176, 39, 39);
+  font-weight: 700;
+}
+
+textarea {
+  width: 300px;
+}
