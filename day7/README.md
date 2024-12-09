@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 🎄 Day 7: Build a Slugify Preview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 Description
 
-## Available Scripts
+The goal of today's challenge is to create a **slugify preview** application. This app consists of a **text input** where users can type a title, and a live-updated preview below it showing its corresponding **slug**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A **responsive text input** where users can enter a title.
+- A **real-time slug preview** that updates dynamically as the user types.
+- The slug is formatted to:
+  - Be all lowercase.
+  - Replace spaces with hyphens (`-`).
+  - Begin with a leading slash (`/`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Users type a title into the input field.
+2. As text is entered or deleted, the slug preview below the input field updates automatically.
+3. The slug is dynamically formatted based on the title, following the formatting rules described above.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React**: To build the interactive UI.
+- **JavaScript (ES6+)**: For handling logic and dynamic updates.
+- **CSS**: For styling the component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📋 Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Type a title in the input field.
+2. Watch the live slug preview update automatically.
+3. Modify or clear the title to see the slug adjust dynamically.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🌟 What I Learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- How to use React's **state management** (`useState`) to track and update input changes.
+- How to format strings dynamically and ensure consistent output (e.g., lowercase, hyphen-separated).
+- How to structure a React app with reusable components like `Input` and `Slug`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📜 License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is part of my **Advent of JavaScript 2024** challenge and is licensed under the MIT License. Feel free to use, modify, or share!
