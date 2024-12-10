@@ -27,7 +27,6 @@ The goal of today's challenge is to create a **tag input field**. This interacti
    - The input clears for new entries.
 3. Tags are displayed below or within the input field as styled elements.
 4. Clicking the `x` button on a tag removes it from the list.
-5. Pressing the `Delete` key with an empty input removes the last tag in the list.
 
 ---
 
