@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 🎄 Day 9: Persist Form Data Across a Page Refresh
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 Description
 
-## Available Scripts
+Today's challenge is to build a **form** that retains its data even after the user refreshes the page or navigates away and returns. This feature improves user experience by preventing data loss during accidental refreshes.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Dynamic form fields**:
+  - A user can fill out various input types, such as text, email, radio buttons, and checkboxes.
+- **Data persistence**:
+  - The form retains all user-entered data across page refreshes using browser storage.
+- **Data clearing on submission**:
+  - Upon successful submission, the form data resets, ready for new input.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Users fill out the form with the following fields:
+   - **Name**: Text input (required)
+   - **Email Address**: Email input (required)
+   - **Favorite Reindeer**: Radio buttons (required)
+   - **Holiday Movies Watched**: Checkboxes with these options:
+     - *Elf (2003)*
+     - *Home Alone (1990)*
+     - *The Grinch (1966)*
+     - *It’s a Wonderful Life (1946)*
+     - *Die Hard (1988)*
+2. The form automatically saves user input into the browser's local storage.
+3. Upon returning to the page, the form repopulates with the previously entered data.
+4. Submitting the form clears the data, resetting it for a fresh start.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React**: For building a dynamic and interactive form.
+- **JavaScript (ES6+)**: To handle form state, persistence logic, and submission behavior.
+- **Browser Local Storage**: To save and retrieve form data across refreshes.
+- **CSS**: To style the form and create a user-friendly design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📋 Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Fill out the form with the required details:
+   - Enter your name and email address.
+   - Select your favorite reindeer.
+   - Check the holiday movies you've watched.
+2. Refresh the page or navigate away, then return to see the form data intact.
+3. Submit the form to clear all data and start fresh.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🌟 What I Learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- How to use **localStorage** to persist user data across page refreshes.
+- How to manage form state dynamically with React.
+- How to handle **form validation** for required fields like text inputs and radio buttons.
+- How to clear persisted data upon form submission for reusability.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📝 Example Code Snippet
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+const saveToLocalStorage = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value));
+};
 
-### Code Splitting
+const getFromLocalStorage = (key) => {
+  const storedValue = localStorage.getItem(key);
+  return storedValue ? JSON.parse(storedValue) : null;
+};
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+// Save form data
+useEffect(() => {
+  saveToLocalStorage("formData", formData);
+}, [formData]);
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+// Populate form on page load
+useEffect(() => {
+  const savedData = getFromLocalStorage("formData");
+  if (savedData) setFormData(savedData);
+}, []);
