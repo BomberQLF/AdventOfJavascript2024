@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.app-container {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  width: 20rem;
+  border: 1px solid #f1f1f1;
+  border-radius: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1.5rem;
+}
+
+.text-input label,
+.radio-group label,
+.checkbox-group label {
+  font-weight: bold;
+  margin-bottom: .7rem;
+  font-size: 1rem;
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-options {
+  flex-direction: column;
+}  
+
+.radio-options,
+.checkbox-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.submit-button button {
+  background-color: limegreen;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button button:hover {
+  background-color: darkgreen;
+}
+
+
+#fullName, #email {
+  background: transparent;
+  padding: 1rem 2rem;
+  border: 1px solid gray;
+  border-radius: 12px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

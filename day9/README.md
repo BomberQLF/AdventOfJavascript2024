@@ -1,5 +1,12 @@
 # 🎄 Day 9: Persist Form Data Across a Page Refresh
 
+
+# 🚫 Result 
+
+Unfortunately, I did not manage to successfully complete the DAY 9 challenge. I encountered difficulties with using localStorage to retain the value in the input field after the user refreshed the page. I’ll revisit this challenge later when I have more time to work on it.
+
+However, I still managed to save the DATA from the FORM after the form was submitted.
+
 ## 📖 Description
 
 Today's challenge is to build a **form** that retains its data even after the user refreshes the page or navigates away and returns. This feature improves user experience by preventing data loss during accidental refreshes.
@@ -63,26 +70,3 @@ Today's challenge is to build a **form** that retains its data even after the us
 - How to clear persisted data upon form submission for reusability.
 
 ---
-
-## 📝 Example Code Snippet
-
-```javascript
-const saveToLocalStorage = (key, value) => {
-  localStorage.setItem(key, JSON.stringify(value));
-};
-
-const getFromLocalStorage = (key) => {
-  const storedValue = localStorage.getItem(key);
-  return storedValue ? JSON.parse(storedValue) : null;
-};
-
-// Save form data
-useEffect(() => {
-  saveToLocalStorage("formData", formData);
-}, [formData]);
-
-// Populate form on page load
-useEffect(() => {
-  const savedData = getFromLocalStorage("formData");
-  if (savedData) setFormData(savedData);
-}, []);
