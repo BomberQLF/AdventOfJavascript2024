@@ -1,6 +1,6 @@
 # 🎄 Advent of JavaScript
 
-Welcome to my **Advent of JavaScript** repository! This project is dedicated to solving daily JavaScript challenges (using plain JavaScript or any library/framework of my choice) as part of a coding advent calendar. Each day brings a new challenge to improve my skills and explore various solutions.
+Welcome to my **Advent of JavaScript** repository! This project is dedicated to solving daily JavaScript challenges (using only React) as part of a coding advent calendar. Each day brings a new challenge to improve my skills and explore various solutions.
 
 ---
 
