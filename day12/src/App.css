@@ -1,38 +1,28 @@
-.App {
-  text-align: center;
-}
+/* DM Serif Display - https://fonts.google.com/specimen/DM+Serif+Display
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+Quote - DM Serif Display / 120px font size / 110px line height / Italic
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+Quote color: #4B4035
+Quotation mark color: #A07C5B */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-image: url('./assets/PAPER-TEXTURE.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote {
+  font-family: 'DM Serif Display', serif;
+  font-size: 60px;
+  line-height: 110px;
+  color: #4B4035;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic; 
 }
